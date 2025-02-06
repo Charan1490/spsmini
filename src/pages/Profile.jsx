@@ -42,7 +42,7 @@ const Profile = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put('http://localhost:5000/api/profile/update', { email, ...formData });
+      await axios.put('http://192.168.96.150:5000/api/profile/update', { email, ...formData });
       alert('Profile updated successfully');
     } catch (error) {
       console.error('Error updating profile:', error);

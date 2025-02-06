@@ -27,4 +27,9 @@ app.use('/api/profile', profileRoutes);
 app.use('/api/parking', parkingRoutes);
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const LOCAL_IP = '192.168.96.150'; // Replace with your local IP address
+
+// Start server
+app.listen(PORT, LOCAL_IP, () => {
+  console.log(`Server running at http://${LOCAL_IP}:${PORT}`);
+});
